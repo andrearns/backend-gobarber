@@ -1,4 +1,3 @@
-import { response } from 'express';
 import { getRepository } from 'typeorm';
 import { hash } from 'bcryptjs';
 

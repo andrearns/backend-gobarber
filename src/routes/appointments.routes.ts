@@ -2,10 +2,13 @@ import { Router } from 'express';
 import { getCustomRepository } from 'typeorm';
 import { parseISO } from 'date-fns';
 
+import ensureAuthenticated from '../middlewares/ensureAuthenticated';
 import AppointmentsRepository from '../repositories/AppointmentsRepository';
 import CreateAppointmentService from '../services/CreateAppointmentService';
 
 const appointmentsRouter = Router();
+
+appointmentsRouter.use(ensureAuthenticated);
 
 // Rota: Receber requisição, chamar outro arquivo, devolver uma resposta
 
