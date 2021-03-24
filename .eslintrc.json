@@ -22,17 +22,30 @@
         "prettier/prettier": "error",
         "class-methods-use-this": "off",
         "camelcase": "off",
+        "no-useless-constructor": "off",
         "import/extensions": [
             "error",
             "ignorePackages",
             {
-              "ts": "never"
+                "ts": "never"
             }
-          ]
+        ],
+        "@typescript-eslint/naming-convention": [
+            "error",
+            {
+                "selector": "interface",
+                "prefix": [
+                    "I"
+                ],
+                "format": [
+                    "PascalCase"
+                ]
+            }
+        ]
     },
     "settings": {
         "import/resolver": {
-          "typescript": {}
+            "typescript": {}
         }
-      }
+    }
 }

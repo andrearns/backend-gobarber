@@ -1,8 +1,8 @@
 import { Router } from 'express';
 
-import appointmentsRouter from './appointments.routes'; // Importando a rota de appointments
-import usersRouter from './users.routes';
-import sessionsRouter from './sessions.routes';
+import appointmentsRouter from '@modules/appointments/infra/http/routes/appointments.routes'; // Importando a rota de appointments
+import usersRouter from '@modules/users/infra/http/routes/users.routes';
+import sessionsRouter from '@modules/users/infra/http/routes/sessions.routes';
 
 const routes = Router();
 
